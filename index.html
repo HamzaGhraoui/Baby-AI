@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Dash-AI</title>
+    <meta
+      name="title"
+      content="Dash-AI Baby Emotion Detection App: Understand your baby's emotions like never before.
+
+    "
+    />
+    <meta
+      name="description"
+      content="Dash-AI Baby Emotion Detection App: Use AI to quickly and accurately detect your baby's emotions from their cries."
+    />
+
+    <!-- 
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./templates/assets/images/Dash-AI.PNG"
+      type="image/svg+xml"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./templates/assets/css/all.min.css" />
+    <link rel="stylesheet" href="./templates/assets/css/style.css" />
+
+    <!-- 
+    - preload images
+  -->
+    <link
+      rel="preload"
+      as="image"
+      href="./templates/assets/images/Baby-AI.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./templates/assets/images/Detection-AI.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./templates/assets/images/Family-AI.jpg"
+    />
+  </head>
+
+  <body>
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img
+            src="./templates/assets/images/Dash-AI.PNG"
+            width="90"
+            height="40"
+            alt="Dash-AI "
+            class="logo-light"
+          />
+
+          <img
+            src="./templates/assets/images/Dash-AI.PNG"
+            width="74"
+            height="24"
+            alt="Dash-AI "
+            class="logo-dark"
+          />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img
+                src="./templates/assets/images/Dash-AI.PNG "
+                width="74"
+                height="24"
+                alt="Dash-AI"
+              />
+            </a>
+
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="#" class="navbar-link active">Home</a>
+            </li>
+
+            <li>
+              <a href="#about" class="navbar-link">About</a>
+            </li>
+
+            <li>
+              <a href="#about-label" class="navbar-link">Services</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="navbar-link">Contact</a>
+            </li>
+          </ul>
+
+          <div class="wrapper">
+            <a href="mailto:info@email.com" class="contact-link"
+              >info@dashmarketing.us</a
+            >
+
+            <a href="tel:+12052072222" class="contact-link"
+              >+1 (205) 207-2222</a
+            >
+          </div>
+
+          <ul class="social-list">
+            <li>
+              <a
+                href="https://www.instagram.com/dashmarketing.us/"
+                class="social-link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.facebook.com/dashillinois"
+                class="social-link"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://youtube.com/@DashMarketingUS"
+                class="social-link"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/company/dash-illinois/"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <section class="section hero has-bg-image" aria-label="home">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="h1 hero-title">AI - BABY VOICE DETECTOR</h1>
+
+              <p class="hero-text">
+                Our groundbreaking web application, <b>BabyAI</b>, harnesses the
+                power of cutting-edge artificial intelligence to decode your
+                baby's cries and reveal their emotions. With <b> BabyAI</b>, you
+                can now gain deep insights into your little one's feelings and
+                respond to their needs with even greater sensitivity and care.
+              </p>
+
+              <!--
+              Web App AI
+              -->
+
+              <div class="btn-wrapper">
+                <div class="baby-emotion-detector">
+                  <div id="recordingControls">
+                    <button id="recordButton">
+                      <i class="fas fa-microphone" style="font-size: 25px"></i>
+                    </button>
+                    <p id="recordingStatus"></p>
+                  </div>
+                  <div id="loadingIndicator">Processing...</div>
+                  <p id="result"></p>
+                </div>
+                <div class="demo">
+                  <p>Try it Now !!</p>
+                </div>
+                <!-- <a
+                  href="https://dashmarketing.us/contact/"
+                  class="btn btn-outline"
+                  target="_blank"
+                  >Contact Us</a
+                > -->
+              </div>
+            </div>
+
+            <div class="hero-slider" data-slider>
+              <div class="slider-inner">
+                <ul class="slider-container" data-slider-container>
+                  <li class="slider-item">
+                    <figure
+                      class="img-holder"
+                      style="--width: 575; --height: 550"
+                    >
+                      <img
+                        src="./templates/assets/images/Baby-AI.jpg"
+                        width="575"
+                        height="550"
+                        alt="AI Detector baby voice"
+                        class="img-cover"
+                      />
+                    </figure>
+                  </li>
+
+                  <li class="slider-item">
+                    <div class="hero-card">
+                      <figure
+                        class="img-holder"
+                        style="--width: 575; --height: 550"
+                      >
+                        <img
+                          src="./templates/assets/images/Detection-AI.jpg"
+                          width="575"
+                          height="550"
+                          alt="AI Detector baby voice."
+                          class="img-cover"
+                        />
+                      </figure>
+                    </div>
+                  </li>
+
+                  <li class="slider-item">
+                    <figure
+                      class="img-holder"
+                      style="--width: 575; --height: 550"
+                    >
+                      <img
+                        src="./templates/assets/images/Family-AI.jpg"
+                        width="575"
+                        height="550"
+                        alt="AI Detector baby voice."
+                        class="img-cover"
+                      />
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+
+              <button
+                class="slider-btn prev"
+                aria-label="slide to previous"
+                data-slider-prev
+              >
+                <ion-icon name="arrow-back"></ion-icon>
+              </button>
+
+              <button
+                class="slider-btn next"
+                aria-label="slide to next"
+                data-slider-next
+              >
+                <ion-icon name="arrow-forward"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #SERVICE
+      -->
+
+        <section
+          class="section service"
+          aria-labelledby="service-label"
+          id="about"
+        >
+          <div class="container">
+            <p class="section-subtitle" id="service-label">
+              What is <b>Baby AI?</b>
+            </p>
+
+            <h2 class="h2 section-title">
+              The service we offer is specifically designed to meet your needs.
+            </h2>
+
+            <ul class="grid-list">
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="speedometer-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">Real Time Detection</h3>
+
+                  <p class="card-text">
+                    Our web app uses real-time detection to identify your baby's
+                    emotions as they cry. This means that you can get instant
+                    feedback on your baby's needs, so you can respond quickly
+                    and appropriately.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="shield-checkmark-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">Accuracy 98%</h3>
+
+                  <p class="card-text">
+                    You can be confident that the information you're getting
+                    from Baby Ai is accurate,Our web app has an accuracy of 98%,
+                    which means that it is very accurate in identifying your
+                    baby's emotions.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="barcode-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">Audio Analysis</h3>
+
+                  <p class="card-text">
+                    Knowing that our web app is using the best technology to
+                    identify your baby's emotions by using the best AI models
+                    for audio processing, it can accurately identify the changes
+                    in your baby's cry.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div class="service-card">
+                  <div class="card-icon">
+                    <ion-icon
+                      name="people-circle-outline"
+                      aria-hidden="true"
+                      style="width: 35px; height: 35px"
+                    ></ion-icon>
+                  </div>
+
+                  <h3 class="h4 card-title">User Friendly</h3>
+
+                  <p class="card-text">
+                    You don't need to be a tech expert to use our web app. The
+                    interface is easy to understand, and the app is very easy to
+                    use ,Knowing that our web app is user-friendly can give you
+                    peace of mind.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 
+        - #ABOUT
+      -->
+
+        <section class="about" aria-labelledby="about-label">
+          <div class="container">
+            <figure class="about-banner">
+              <img
+                src="./templates/assets/images/AI Recording.jpg"
+                width="800"
+                height="900"
+                loading="lazy"
+                alt="Baby AI Emotion Recording Voice "
+                class="w-100"
+              />
+            </figure>
+
+            <div class="about-content">
+              <p class="section-subtitle" id="about-label">Why Choose Us?</p>
+
+              <h2 class="h2 section-title">
+                We can accurately detect all types of baby emotions
+              </h2>
+
+              <ul>
+                <l i class="about-item">
+                  <div class="accordion-card expanded" data-accordion>
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon
+                          name="chevron-down-outline"
+                          aria-hidden="true"
+                          class="down"
+                        ></ion-icon>
+
+                        <spna class="span h5">Hungry</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      Babies make a high-pitched, whiny cry when they are
+                      hungry. The cry may be intermittent or continuous, and it
+                      may be accompanied by sucking motions or rooting.
+                    </p>
+                  </div>
+                </l>
+
+                <li class="about-item">
+                  <div class="accordion-card" data-accordion>
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon
+                          name="chevron-down-outline"
+                          aria-hidden="true"
+                          class="down"
+                        ></ion-icon>
+
+                        <spna class="span h5">Tired</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      Babies make a low-pitched, moaning cry when they are
+                      tired. The cry may be intermittent or continuous, and it
+                      may be accompanied by yawning or rubbing the eyes.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="about-item">
+                  <div class="accordion-card" data-accordion>
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon
+                          name="chevron-down-outline"
+                          aria-hidden="true"
+                          class="down"
+                        ></ion-icon>
+
+                        <spna class="span h5">Discomfort</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      Babies make a sharp, piercing cry when they are
+                      uncomfortable. The cry may be intermittent or continuous,
+                      and it may be accompanied by facial expressions of pain or
+                      discomfort.
+                    </p>
+                  </div>
+                </li>
+                <li class="about-item">
+                  <div class="accordion-card" data-accordion>
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon
+                          name="chevron-down-outline"
+                          aria-hidden="true"
+                          class="down"
+                        ></ion-icon>
+
+                        <spna class="span h5">Belly Pain</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      Babies make a grunting or groaning cry when they have
+                      belly pain. The cry may be intermittent or continuous, and
+                      it may be accompanied by pulling the legs up to the chest.
+                    </p>
+                  </div>
+                </li>
+                <li class="about-item">
+                  <div class="accordion-card" data-accordion>
+                    <h3 class="card-title">
+                      <button class="accordion-btn" data-accordion-btn>
+                        <ion-icon
+                          name="chevron-down-outline"
+                          aria-hidden="true"
+                          class="down"
+                        ></ion-icon>
+
+                        <spna class="span h5">Burping</spna>
+                      </button>
+                    </h3>
+
+                    <p class="accordion-content">
+                      Babies make a gurgling or burping sound when they need to
+                      burp. The sound may be intermittent or continuous, and it
+                      may be accompanied by a look of relief.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 
+        - #CTA
+      -->
+
+        <section class="cta" aria-label="call to action" id="contact">
+          <div class="container">
+            <h2 class="h2 section-title subscribe">
+              Join our community by using our services to grow your business.
+            </h2>
+
+            <a
+              href="https://dashmarketing.us/"
+              class="btn btn-primary contact"
+              target="_blank"
+              >Join Now !</a
+            >
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="container grid-list">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img
+              src="./templates/assets/images/Dash-AI.PNG"
+              width="25%"
+              height="24"
+              alt="Dash AI"
+              style="font-size: 40px"
+            />
+          </a>
+
+          <p class="footer-text">
+            &copy; 2023 | Dash-AI <br />
+            All rights reserved.
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a
+                href="https://www.instagram.com/dashmarketing.us/"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.facebook.com/dashillinois"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtube.com/@DashMarketingUS"
+                class="social-link"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.linkedin.com/company/dash-illinois/"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Get in Touch</p>
+          </li>
+
+          <li>
+            <address class="footer-text">Atlanta, Georgia</address>
+          </li>
+
+          <li>
+            <a href="mailto:info@email.com" class="footer-link">
+              info@dashmarketing.us</a
+            >
+          </li>
+
+          <li>
+            <a href="tel:001234567890" class="footer-link">+1 (205) 207-2222</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="h4 footer-list-title">Learn More</p>
+          </li>
+
+          <li>
+            <a
+              href="https://dashmarketing.us/about/"
+              class="footer-link"
+              target="_blank"
+              >About Us</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="http://dashmarketing.us/privacy-policy/"
+              target="_blank"
+              class="footer-link"
+              >Privacy Policy</a
+            >
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <p class="h4 footer-list-title">Our Newsletter</p>
+
+          <p class="footer-text">
+            Subscribe to our newsletter to get our news & deals delivered to
+            you.
+          </p>
+
+          <form
+            action="https://formsubmit.co/
+            info@dashmarketing.us"
+            class="input-wrapper"
+            method="POST"
+          >
+            <input
+              type="email"
+              name="email_address"
+              placeholder="Email Address"
+              required
+              class="input-field"
+            />
+
+            <button type="submit" class="submit-btn" target="_blank">
+              Join
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./templates/assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Connection to Ai Model  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let mediaRecorder;
+        let audioChunks = [];
+        let isRecording = false;
+        let hasMicrophonePermission = false;
+        let mediaStream; // Store the media stream
+
+        function startRecording() {
+          const constraints = { audio: true };
+
+          if (hasMicrophonePermission && mediaStream.active) {
+            startMediaRecorder();
+          } else {
+            navigator.mediaDevices
+              .getUserMedia(constraints)
+              .then(function (stream) {
+                hasMicrophonePermission = true;
+                mediaStream = stream; // Store the media stream
+                startMediaRecorder(stream);
+              })
+              .catch(function (err) {
+                console.error("Error accessing the microphone: ", err);
+                document.getElementById("recordingStatus").innerText =
+                  "Error accessing the microphone.";
+              });
+          }
+        }
+
+        function startMediaRecorder(stream) {
+          try {
+            mediaRecorder = new MediaRecorder(stream);
+          } catch (error) {
+            console.error("Error creating MediaRecorder:", error);
+            document.getElementById("recordingStatus").innerText =
+              "Error creating MediaRecorder. Please ensure microphone permission is granted.";
+            return;
+          }
+
+          mediaRecorder.ondataavailable = function (e) {
+            if (isRecording && e.data.size > 0) {
+              audioChunks.push(e.data);
+            }
+          };
+
+          mediaRecorder.onstop = function () {
+            document.getElementById("recordingStatus").innerText =
+              "Recording stopped.";
+            document.getElementById("recordButton").classList.remove("active");
+            isRecording = false;
+
+            const blob = new Blob(audioChunks, { type: "audio/wav" });
+
+            const audioDuration = audioChunks.reduce(
+              (total, chunk) => total + chunk.duration,
+              0
+            );
+            if (audioDuration > 8000) {
+              document.getElementById("recordingStatus").innerText =
+                "Warning: Recording is longer than 8 seconds.";
+            } else {
+              document.getElementById("recordingStatus").innerText =
+                "Processing...";
+              document.getElementById("result").innerText = "";
+
+              const file = new File([blob], "baby_recording.wav", {
+                type: "audio/wav",
+              });
+              sendAudioToServer(file);
+            }
+
+            // Release the media stream after recording is stopped
+            mediaStream.getTracks().forEach((track) => track.stop());
+          };
+
+          mediaRecorder.start();
+          document.getElementById("recordButton").classList.add("active");
+          document.getElementById("recordingStatus").innerText = "Recording...";
+          isRecording = true;
+        }
+
+        function sendAudioToServer(file) {
+          const formData = new FormData();
+          formData.append("file", file);
+
+          fetch("http://localhost:5000/predict", {
+            method: "POST",
+            body: formData,
+          })
+            .then(function (response) {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then(function (data) {
+              document.getElementById("result").innerText =
+                "Predicted Mood: " + data.predicted_mood;
+              document
+                .getElementById("loadingIndicator")
+                .classList.add("hidden");
+            })
+            .catch(function (error) {
+              console.error("Error:", error);
+              document.getElementById("result").innerText =
+                "Error occurred during prediction.";
+              document
+                .getElementById("loadingIndicator")
+                .classList.add("hidden");
+            });
+        }
+
+        document
+          .getElementById("recordButton")
+          .addEventListener("pointerdown", function () {
+            startRecording();
+          });
+
+        document.addEventListener("pointerup", function () {
+          if (isRecording) {
+            mediaRecorder.stop();
+            document
+              .getElementById("loadingIndicator")
+              .classList.remove("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
