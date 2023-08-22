@@ -1,7 +1,7 @@
 # Save this code in a file named app.py
 
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify , render_template
 from flask_cors import CORS ,cross_origin
 
 import numpy as np
@@ -59,7 +59,7 @@ def process_input(audio_file, track_duration):
 
 @app.route('/')
 def index():
-    return "Baby Emotion Detector Backend"
+    return render_template("index.html")
 
 @app.route('/predict', methods=['POST'])
 @cross_origin()
